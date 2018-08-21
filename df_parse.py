@@ -93,6 +93,16 @@ def convert_from_bytes (val):
         return (val/1024/1024/1024/1024/1024, "PB")
 
 
+def usage():
+    sys.stderr.write("Usage: df_parse.py [-t space|file|both] file1 [file2]")
+    sys.stderr.write(" type 'space' is for df -h output")
+    sys.stderr.write(" type 'files' is for df -i output")
+    sys.stderr.write(" type 'both' is for both types -- use 2 files here")
+
+    
+
+
+
 vol_list = []
 vol_name = ''
 total_bytes = 0
